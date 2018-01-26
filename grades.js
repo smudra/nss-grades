@@ -31,12 +31,11 @@ Which grade had the fewest students achieve it?
 
 const scores = [82, 71, 62, 95, 90, 98, 69, 72, 63, 84, 64, 58, 87, 60];
 const grades = {
-
-A: 0,
-B: 0,
-C: 0,
-D: 0,
-F: 0,
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    F: 0
 };
 
 for (let i = 0; i < scores.length; i++) {
@@ -63,20 +62,15 @@ console.log("Number of D grade is: ", grades.D);
 console.log("Number of F grade is: ", grades.F);
 
 
-// Finding the highest grade in the array
+// Finding the highest & lowest grade in the array
 var scoresSort = scores.sort();
-var scoresHigh = 0;
+
 for (var x = 0; x < scoresSort.length; x++) {
    
-    scoresHigh = scoresSort[x];
+    var scoresHighest = scoresSort[x];
+    var scoresLowest = scoresSort[0];
 }
+    console.log("Sorting the grades in ascending order: ", scoresSort);
+    console.log("Showing the lowest grade: ", scoresLowest);
+    console.log("The highest score is: ", scoresHighest);
 
-//Reversing the scoresSort to get the lowest grade number
-var scoresLowest = scoresSort.reverse();
-for (var y = 0; y < scoresLowest.length; y++) {
-    scoresLow = scoresLowest[y];
-}
-
-console.log("The highest score is: ", scoresHigh);
-
-console.log("The lowest grade is: ", scoresLow);
