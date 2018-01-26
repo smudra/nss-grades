@@ -30,40 +30,37 @@ Which grade had the fewest students achieve it?
 
 
 const scores = [82, 71, 62, 95, 90, 98, 69, 72, 63, 84, 64, 58, 87, 60];
-const grades = {};
+const grades = {
 
-var a = 0;
-var b = 0;
-var c = 0;
-var d = 0;
-var f = 0;
+A: 0,
+B: 0,
+C: 0,
+D: 0,
+F: 0,
+};
 
-for (var i = 0; i < scores.length; i++) {
+for (let i = 0; i < scores.length; i++) {
     if (scores[i] > 90) {
         //a = scores[i];
         //console.log("Number of A grade is: ", a);
-        a = a + 1;
+        grades.A += 1;
         
-   }
-   else if (scores[i] > 80 && scores[i] < 91) {
-       //b = b + 1;
-       b = ++b;
-   }
-   else if (scores[i] > 70 && scores[i] < 81) {
-       c = c + 1;
-   }
-   else if (scores[i] > 60 && scores[i] < 71) {
-       d = d + 1;
-   }
-   else if (scores[i] < 61 ) {
-       f = f + 1;
+   }else if (scores[i] > 80 && scores[i] < 91) {
+       grades.B += 1;
+   
+   }else if (scores[i] > 70 && scores[i] < 81) {
+    grades.C += 1;
+   }else if (scores[i] > 60 && scores[i] < 71) {
+    grades.D += 1;
+   }else if (scores[i] < 61 ) {
+    grades.F += 1;
    }
 }
-console.log("Number of A grade is: ", a);
-console.log("Number of B grade is: ", b);
-console.log("Number of C grade is: ", c);
-console.log("Number of D grade is: ", d);
-console.log("Number of F grade is: ", f);
+console.log("Number of A grade is: ", grades.A);
+console.log("Number of B grade is: ", grades.B);
+console.log("Number of C grade is: ", grades.C);
+console.log("Number of D grade is: ", grades.D);
+console.log("Number of F grade is: ", grades.F);
 
 
 // Finding the highest grade in the array
