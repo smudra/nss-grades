@@ -29,4 +29,4 @@ Use console.log() to output the following criteria to the browser console.
 2. What is the lowest score? Sort the array and find out.
 3. What is the highest score?
 4. Which grade had the most students achieve it?   Use an if statment, and a currentGradeCount variable, in your for..in loop to see if the current grade's value is higher than the last one.
-6. Which grade had the fewest students achieve it?
+5. Which grade had the fewest students achieve it?
